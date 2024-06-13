@@ -8,7 +8,7 @@ apt install git
 
 apt install python3
 
-got clone https://github.com/SoloTech01/QuadPro.git
+git clone https://github.com/SoloTech01/QuadPro.git
 
 cd QuadPro
 
