@@ -1,6 +1,6 @@
-import os
 import time
 import sys
+import os
 os.system("clear")
 print(""" \033[92m
 ░██████╗░██╗░░░██╗░█████╗░██████╗░██████╗░██████╗░░█████╗░
@@ -21,10 +21,29 @@ def quadpro(x,y,z):
     	     	try:
     	     		 root_one = (-y +  (((y ** 2) - (4 * x * z)) ** 0.5)) / (2*x)
     	     		 root_two = (-y -  (((y ** 2) - (4 * x * z)) ** 0.5)) / (2*x)
+    	     		 l = (y ** 2) - (4 * x * z)
     	     		 print("\033[92mCalculating......")
     	     		 time.sleep(2)
     	     		 print(f"The roots of the quadratic equation in real numbers are: {root_one.real:,.2f} and {root_two.real:,.2f}")
     	     		 print(f"The roots of the quadratic equation in complex numbers are: {complex(root_one):,.6f} and {complex(root_two):,.6f}")
+    	     		 response = input("\nTo see a detailed solution to this equation,enter 's' or 'q' to quit: ")
+    	     		 if response.lower().strip() == "s":
+    	     		 	print("\033[1;33;40mGenerating Solution....")
+    	     		 	time.sleep(2)
+    	     		 	print(f"""\n\033[92mSOLUTION:
+FORMULA: (-b ± √(b^2 - 4ac)) / 2a
+a = {x}, b = {y}, c = {z}
+SOLVING b² - 4ac: {y}² - (4 x {x} x {z}) = {y**2} - {4*x*z} = {l}
+(-{y} + √{l}) / (2 x {x}) or (-{y} - √{l}) / (2 x {x})
+-{y} + {(l**0.5).real:,.2f} / {2*x} or -{y} - {(l**0.5).real:,.2f} / {2*x}
+ANSWER: {root_one.real:,.2f} or {root_two.real:,.2f}
+                          OR
+IN COMPLEX NUMBERS: -{y} + {l**0.5:.2f} / {2*x} or -{y} - {l**0.5:.2f} / {2*x}
+ANSWER: {root_one:,.6f} and {root_two:,.6f}
+""")
+    	     		 elif response.lower().strip() == "q":
+    	     		 	print("\033[1;31;40mquitting....")
+    	     		 	time.sleep(2)
     	     		 valid = True
     	     	except ZeroDivisionError:
     	     		print("\033[1;31;40m An error occured!")
