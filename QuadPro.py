@@ -13,7 +13,7 @@ print(""" \033[92m
 print("\033[1;33;40mLoading....")
 time.sleep(2)
 print("\033[1;36;40m======" * 10)
-print("""\033[1;36;40m[+] Coded by SoloTech
+print("""\033[1;36;40m[+] Created by Solomon Adenuga
 [✓] QuadPro is a mathematical tool for solving quadratic equations""")
 def quadpro(x,y,z):
     	     valid = False
