@@ -36,9 +36,11 @@ a = {x}, b = {y}, c = {z}
 SOLVING b² - 4ac: {y}² - (4 x {x} x {z}) = {y**2} - {4*x*z} = {l}
 (-{y} + √{l}) / (2 x {x}) or (-{y} - √{l}) / (2 x {x})
 -{y} + {(l**0.5).real:,.2f} / {2*x} or -{y} - {(l**0.5).real:,.2f} / {2*x}
+{-y + (l**0.5).real:,.2f} / {2*x} or {-y - (l**0.5).real:,.2f} / {2*x}
 ANSWER: {root_one.real:,.2f} or {root_two.real:,.2f}
                           OR
 IN COMPLEX NUMBERS: -{y} + {l**0.5:.2f} / {2*x} or -{y} - {l**0.5:.2f} / {2*x}
+{-y + (l**0.5):,.6f} / {2*x} or {-y - (l**0.5):,.6f} / {2*x}
 ANSWER: {root_one:,.6f} and {root_two:,.6f}
 """)
     	     		 elif response.lower().strip() == "q":
